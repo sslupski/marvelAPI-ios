@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MvErrorView" customModule="Marvel" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="512"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="iRA-4B-beI">
+                    <rect key="frame" x="0.0" y="160.5" width="414" height="235"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="1000" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="bUj-Jj-7FS">
+                            <rect key="frame" x="134.5" y="0.0" width="145" height="145"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="bUj-Jj-7FS" secondAttribute="height" multiplier="1:1" id="bIy-40-8KX"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Ups, something went wrong" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fe9-Xw-BMH">
+                            <rect key="frame" x="112.5" y="161" width="189.5" height="18"/>
+                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBH-rh-xX5">
+                            <rect key="frame" x="163.5" y="195" width="87" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="200" id="I4w-I7-xaq"/>
+                                <constraint firstAttribute="height" constant="40" id="h92-5t-Lbb"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Try again">
+                                <backgroundConfiguration key="background" cornerRadius="8">
+                                    <color key="backgroundColor" systemColor="systemRedColor"/>
+                                </backgroundConfiguration>
+                                <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
+                                <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="tryAgain:" destination="iN0-l3-epB" eventType="touchUpInside" id="Dyg-a9-Vei"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="fe9-Xw-BMH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="iRA-4B-beI" secondAttribute="leading" constant="16" id="dMR-dV-Ysh"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <constraints>
+                <constraint firstItem="iRA-4B-beI" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="NhP-V2-viW"/>
+                <constraint firstItem="iRA-4B-beI" firstAttribute="top" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="Oqd-TK-raX"/>
+                <constraint firstItem="bUj-Jj-7FS" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.35" id="hFw-9n-HO7"/>
+                <constraint firstItem="iRA-4B-beI" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="mfp-fZ-Jca"/>
+                <constraint firstItem="iRA-4B-beI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="qHY-I8-4kQ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="imageView" destination="bUj-Jj-7FS" id="CpO-Hj-z0D"/>
+                <outlet property="infoLabel" destination="fe9-Xw-BMH" id="4yp-a9-UNy"/>
+                <outlet property="stackView" destination="iRA-4B-beI" id="4RO-Or-nVK"/>
+                <outlet property="tryAgainButton" destination="GBH-rh-xX5" id="Rlv-Bs-0fO"/>
+            </connections>
+            <point key="canvasLocation" x="265" y="-111"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
