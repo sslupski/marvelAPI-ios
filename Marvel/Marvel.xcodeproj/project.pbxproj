@@ -223,7 +223,6 @@
 			isa = PBXGroup;
 			children = (
 				9373F2D627EB3D700071EC15 /* Views */,
-				9373F2D727EB3D760071EC15 /* ViewModel */,
 			);
 			path = CharacterDetail;
 			sourceTree = "<group>";
@@ -281,13 +280,6 @@
 				9373F2DE27EB4D4B0071EC15 /* MvCharacterDetailItemView.xib */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		9373F2D727EB3D760071EC15 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		9373F2E027EB56490071EC15 /* Utils */ = {

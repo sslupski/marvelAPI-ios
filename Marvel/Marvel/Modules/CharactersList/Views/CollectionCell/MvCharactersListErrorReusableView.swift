@@ -25,7 +25,6 @@ class MvCharactersListErrorReusableView: UICollectionReusableView {
         let errorModel = MvErrorViewModel(image: image, delegate: self)
 
         guard let errorView = MvErrorView.create(model: errorModel) else { return }
-        translatesAutoresizingMaskIntoConstraints = false
         backgroundColor = .clear
         addSubview(errorView)
         NSLayoutConstraint.activate([

@@ -27,7 +27,6 @@ class MvIndicatorCollectionViewCell: UICollectionReusableView {
     }
 
     func setup(){
-        translatesAutoresizingMaskIntoConstraints = false
         backgroundColor = .clear
         addSubview(indicator)
         NSLayoutConstraint.activate([
